@@ -14,7 +14,7 @@ oc project labs-infra
 for m in {1..4}; do
   echo モジュール $m を置き換えます
   export CONTENT_URL_PREFIX=https://github.com/team-ohc-jp-place/cloud-native-workshop-v2m${m}-guides/tree/ocp-4.5-jp
-  export WORKSHOPS_URLS=${CONTENT_URL_PREFIX}_cloud-native-workshop-module${m}.yml
+  export WORKSHOPS_URLS=${CONTENT_URL_PREFIX}/_cloud-native-workshop-module${m}.yml
   # 元データ確保
   oc get dc/guides-m${m} -o yaml > orignal_guilde-m${m}.yaml
   # ドキュメント参照先変更
