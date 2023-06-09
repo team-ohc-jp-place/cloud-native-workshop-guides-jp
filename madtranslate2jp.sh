@@ -38,7 +38,7 @@ if [ `oc whoami` ]; then
         oc delete route mad-dev-guides-m${m}
 
         #日本語コンテンツの追加
-        oc new-app https://github.com/team-ohc-jp-place/mad-dev-guides-m${m}.git#$｛CONTENT_PREFIX｝-jp --strategy=docker
+        oc new-app https://github.com/team-ohc-jp-place/mad-dev-guides-m${m}.git#${CONTENT_PREFIX}-jp --strategy=docker
         oc create route edge mad-dev-guides-m${m} --service=mad-dev-guides-m${m}
    done
    
