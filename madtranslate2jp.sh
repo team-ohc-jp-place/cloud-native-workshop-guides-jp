@@ -20,7 +20,7 @@ export MASTER_URL=$1
 oc login ${MASTER_URL} -u admin -p $2 --insecure-skip-tls-verify=true
 
 # ブランチのバージョン
-export CONTENT_PREFIX=main
+export CONTENT_PREFIX=patch-postgres
 
 if [ `oc whoami` ]; then
 
