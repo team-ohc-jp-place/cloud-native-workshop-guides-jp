@@ -28,7 +28,7 @@ if [ `oc whoami` ]; then
   oc project dev-guides
   
   #モジュールを日本語に置き換えます 
-  for m in {1..6}; do
+  for m in {1..7}; do
         echo モジュール $m を置き換えます
         
         #英語コンテンツの削除
